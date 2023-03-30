@@ -1,0 +1,1 @@
+python train_batch.py --data_meta_dir data/4species_lineGT_sample1000

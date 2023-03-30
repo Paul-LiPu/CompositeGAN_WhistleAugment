@@ -17,6 +17,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_meta_dir', type=str, required=True, help='Directory containing the meta files for positive and negative files')
+parser.add_argument('--mode', type=str, required=True, help='training for generating background noise (neg) or whistle contour (pos)')
 
 config = parser.parse_args()
 
@@ -64,7 +65,7 @@ for txt_file in pos_data_files:
     filename = os.path.basename(txt_file)
     results = matcher.findall(filename)
     exp_name = results[0]
-    run_code = 'python train.py --exp_name ' + exp_name + ' --mode pos --train_file ' + txt_file + \
+    run_code = 'python train.py --exp_name ' + exp_name + ' --mode ' + config.mode + ' --train_file ' + txt_file + \
         ' --train_iters ' + str(pos_train_iters) + ' --niter_save_model ' + str(pos_train_save) + \
         ' --model_dir ' + pos_model_dir + ' --log_dir ' + pos_log_dir
     txt_logger.info(run_code)

@@ -11,6 +11,11 @@ in our previous repository of [DeepWhistle](https://github.com/Paul-LiPu/DeepWhi
  
 ## Stage-wise GAN
 #### WGANs for generating background noises and whistle contours
-
+To train the WGAN model
+> ```bash
+> python train_batch.py --mode [pos | neg] --data_meta_dir [path_to_folder_containing_training_h5_files]
+> ```
+For the mode option, please choose 'pos' for generating whistle 
+contours and 'neg' for generating background noise. 
 
 #### CycleGAN for generating whistles on background noise

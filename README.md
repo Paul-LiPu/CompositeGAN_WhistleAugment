@@ -18,4 +18,8 @@ To train the WGAN model
 For the mode option, please choose 'pos' for generating whistle 
 contours and 'neg' for generating background noise. 
 
+The code is based on [https://github.com/caogang/wgan-gp](https://github.com/caogang/wgan-gp)
+
 #### CycleGAN for generating whistles on background noise
+
+The code is based on [https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
